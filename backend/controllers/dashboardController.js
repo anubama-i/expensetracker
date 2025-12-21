@@ -35,13 +35,13 @@ exports.getDashboardData = async(req, res) => {
         );
 
         //Get expense transactions in the last 30 days
-        const last60DaysExpenseTransactions = await Expense.find({
+        const last30DaysExpenseTransactions = await Expense.find({
             userId,
-            date: { $gte: new Date(Date.now() - 60 * 24 * 60 * 60 * 1000 )},
+            date: { $gte: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000 )},
         }).sort({ date: -1});
 
-        //Get total expense for last 60 Days
-        const expenseLast60Days = last60DaysExpenseTransactions.reduce(
+        //Get total expense for last 30 Days
+        const expensesLast30Days = last30DaysExpenseTransactions.reduce(
             (sum, transaction) => sum+transaction.amount,
             0
         );
