@@ -13,7 +13,7 @@ const app = express();
 //Middleware to handle CORS
 app.use(
     cors({
-        origin: process.env.CLIENT_URL || "*",
+        origin: 'https://expensetracker-9pxg-p6iozs6b6-anubama2006-gmailcoms-projects.vercel.app' || process.env.CLIENT_URL || "*",
         methods: ["GET","POST","PUT","DELETE"],
         allowedHeaders: ["Content-Type", "Authorization"],
     })
