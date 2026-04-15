@@ -1,4 +1,4 @@
-export const BASE_URL = `${process.env.VITE_API_URL}`;
+export const BASE_URL = 'https://expensetracker-9pxg-p6iozs6b6-anubama2006-gmailcoms-projects.vercel.app';
 
 //utils/apiPaths.js
 export const API_PATHS = {
